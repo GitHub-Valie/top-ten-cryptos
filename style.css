@@ -1,44 +1,89 @@
-h1 {
-    font-family: 'Roboto', cursive;
+body {
+    background: -webkit-linear-gradient(left, #eeeeee, #eeeeee);
+    background: linear-gradient(to right, #eeeeee, #eeeeee);
+    font-family: 'Source Code Pro';
 }
 
+/* h1 {
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(255, 255, 255);
+    text-align: center;
+} */
+
 h2 {
-    font-family: 'Roboto', cursive;
+    font-family: 'Source Code Pro', monospace;
 }
 
 h5 {
-    font-family: 'Roboto', cursive;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
 }
 
+/* list item */
 li {
-    font-family: 'Roboto', cursive;
+    font-family: 'Source Code Pro', monospace;
 }
 
+/* Cryptocurrency ranking by global market cap. */
+.main-title {
+    color: #393e46;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    padding-top: 75px;
+    text-align: center;
+}
+
+/* paragraph */
 p {
-    font-family: 'Roboto', cursive;
+    font-family: 'Source Code Pro', monospace;
 }
 
 section {
     margin: 75px;
 }
 
-.table-contents {
-    margin-top: 0px;
-    border: 1px solid;
+table {
+    width: 100%;
+    table-layout: fixed;
 }
 
-/* .table-header {
-    border: 1px solid;
-} */
+/* class table-contents */
+.table-contents {
+    margin-top: 0px;
+    border: 1px solid #393e46;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
 
-td {
-    font-family: 'Roboto', cursive;
-    padding: 15px;
+/* class table-header */
+.table-header {
+    background-color: #393e46;
+}
+
+/* table header: market cap */
+.th-market-cap {
     text-align: right;
+}
+
+/* table data: market cap */
+.td-market-cap {
+    text-align: right;
+}
+
+/* table data */
+td {
+    border-bottom: solid 1px #393e46;
+    color: #393e46;
+    font-family: 'Source Code Pro';
+    padding: 15px;
     vertical-align: middle;
 }
 
+/* table header */
 th {
-    font-family: 'Roboto', cursive;
+    color: #eeeeee;
+    font-family: 'Source Code Pro';
+    font-weight: 500;
     padding: 15px;
+    text-align: left;
+    vertical-align: middle;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Doctype html indique qu'il s'agit bien d'une page HTML -->
+<!-- Doctype html indicates this is an html web page -->
 <html lang="en">
 <head>
     <!-- En-tête de la page -->
@@ -9,7 +9,7 @@
 
     <link type="text/css" rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
     <!-- Intégration d'une police personnalisée provenant de Google 
         Ces balises link contiennent des attributs supplémentaires (type "href", "rel") -->
 
@@ -19,84 +19,87 @@
     <title>Home</title>
 </head>
 <body>
-    <!-- Corps de la page -->
-    <h1>Cryptocurrency ranking by global market capitalization</h1>
+    <!-- page body -->
+    <h1 class="main-title">Cryptocurrency ranking by Market Capitalization</h1>
+    
+    <!-- section corresponding to the cryptocurrency ranking table -->
     <section>
-        <h2>Ranking table</h2>
+        <!-- first division contains thead -->
         <div class="table-header">
-            <table>
+            <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
-                    <tr>
+                    <tr> <!-- table row element -->
                         <th>Rank</th>
                         <th>Cryptocurrency</th>
                         <th>Ticker</th>
-                        <th>Market Cap.</th>
+                        <th class="th-market-cap">Market Cap. (05-2021)</th>
                     </tr>
                 </thead>
             </table>
         </div>
+        <!-- second division contains tbody-->
         <div class="table-contents">
-            <table>
+            <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                     <tr>
                         <td>1</td>
                         <td>Bitcoin</td>
                         <td>BTC</td>
-                        <td>$1,033,174,785,257</td>
+                        <td class="td-market-cap">$1,033,174,785,257</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Ethereum</td>
                         <td>ETH</td>
-                        <td>$387,355,110,591</td>
+                        <td class="td-market-cap">$387,355,110,591</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Binance Coin</td>
                         <td>BNB</td>
-                        <td>$98,899,661,526</td>
+                        <td class="td-market-cap">$98,899,661,526</td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Dogecoin</td>
                         <td>DOGE</td>
-                        <td>$85,827,415,917</td>
+                        <td class="td-market-cap">$85,827,415,917</td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Ripple</td>
                         <td>XRP</td>
-                        <td>$67,851,718,863</td>
+                        <td class="td-market-cap">$67,851,718,863</td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Tether</td>
                         <td>USDT</td>
-                        <td>$52,831,240,500</td>
+                        <td class="td-market-cap">$52,831,240,500</td>
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>Cardano</td>
                         <td>ADA</td>
-                        <td>$43,411,833,840</td>
+                        <td class="td-market-cap">$43,411,833,840</td>
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>Polkadot</td>
                         <td>DOT</td>
-                        <td>$35,465,249,727</td>
+                        <td class="td-market-cap">$35,465,249,727</td>
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>Litecoin</td>
                         <td>LTC</td>
-                        <td>$22,859,736,033</td>
+                        <td class="td-market-cap">$22,859,736,033</td>
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>Uniswap</td>
                         <td>UNI</td>
-                        <td>$22,834,816,764</td>
+                        <td class="td-market-cap">$22,834,816,764</td>
                     </tr>
                 </tbody>
             </table>
@@ -106,7 +109,7 @@
         <a href="https://coinmarketcap.com/">
             <h5>Source: Coinmarketcap.com</h5>
         </a>
-        <br />
+        <!-- <br /> -->
         <a href="descriptions.html">
             <h5>Go to descriptions</h5>
         </a>
