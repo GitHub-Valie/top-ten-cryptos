@@ -1,0 +1,44 @@
+h1 {
+    font-family: 'Roboto', cursive;
+}
+
+h2 {
+    font-family: 'Roboto', cursive;
+}
+
+h5 {
+    font-family: 'Roboto', cursive;
+}
+
+li {
+    font-family: 'Roboto', cursive;
+}
+
+p {
+    font-family: 'Roboto', cursive;
+}
+
+section {
+    margin: 75px;
+}
+
+.table-contents {
+    margin-top: 0px;
+    border: 1px solid;
+}
+
+/* .table-header {
+    border: 1px solid;
+} */
+
+td {
+    font-family: 'Roboto', cursive;
+    padding: 15px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+th {
+    font-family: 'Roboto', cursive;
+    padding: 15px;
+}
