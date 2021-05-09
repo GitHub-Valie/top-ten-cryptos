@@ -61,6 +61,7 @@
         <section>
             <h2 class="exercise-title">Multiple jusqu'à une limite</h2>
             <p class="centered-content">Donne tous les multiples du nombre spécifié, jusqu'à une limite spécifiée.</p>
+            <!-- Une div pour chaque input -> alignement vertical -->
             <div class="centered-content">
                 <input type="text" placeholder="Saisir un nombre" id="ex4-user-input1">
             </div>
@@ -92,7 +93,7 @@
         <!-- Exercice 6: Déterminer tous les nombres premiers jusqu'à limite -->
         <section>
             <h2 class="exercise-title">Nombres premiers jusqu'à limite</h2>
-            <p class="centered-content"></p>
+            <p class="centered-content">Détermine tous les nombres premiers jusqu'à une limite à spécifier.</p>
             <div class="centered-content">
                 <input type="text" placeholder="Saisir un nombre limite" id="ex6-user-input">
             </div>
@@ -101,6 +102,23 @@
             </div>
             <div class="centered-content" id="demande6"></div>
             <script src="scripts/primeNumberLimit.js"></script>
+        </section>
+
+        <!-- Exercice7: Trier 3 nombres saisis par l'utilisateur -->
+        <section>
+            <h2 class="exercise-title">Trier 3 nombres</h2>
+            <p class="centered-content">Trie trois nombres à spécifier.</p>
+            <!-- 3 inputs dans une même div -> alignement horizontal -->
+            <div class="centered-content">
+                <input type="text" placeholder="Saisir un nombre" id="ex7-user-input1">
+                <input type="text" placeholder="Saisir un nombre" id="ex7-user-input2">
+                <input type="text" placeholder="Saisir un nombre" id="ex7-user-input3">
+            </div>
+            <div class="centered-content">
+                <button class="button-gradient" type="button" id="sort-numbers">Valider les trois nombres</button>
+            </div>
+            <div class="centered-content" id="demande7"></div>
+            <script src="scripts/numberSorting.js"></script>
         </section>
 
         <!-- Navigation -->
