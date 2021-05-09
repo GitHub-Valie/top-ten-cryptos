@@ -4,7 +4,7 @@ var affichage = function () {
     
     for (let i = 1; i <= limite; i++) {
         if (i%7 == 0) {
-            document.getElementById('demande2').innerHTML += i + ' est divisible par 7'+  '<br>' ;
+            document.getElementById('demande2').innerHTML += i + ' est divisible par 7' +  '<br>' ;
         }
         
     }

@@ -1,78 +1,112 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link type="text/css" rel="stylesheet" href="style/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-    <title>Algorithmie JS</title>
-</head>
-<body>
-    <h1 class="main-title">Algorithmie JS</h1>
 
-    <!-- Exercice 1: Pair ou impair? -->
-    <section>
-        <h2 class="exercise-title">Pair ou impair?</h2>
-        <div class="centered-content">
-            <input
-                type="text" 
-                placeholder="Saisir un nombre" 
-                id="ex1-user-input"
-            >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <link type="text/css" rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <title>Algorithmie JS</title>
+    </head>
+
+    <body>
+        <h1 class="main-title">Algorithmie JS</h1>
+
+        <!-- Exercice 1: Pair ou impair? -->
+        <section>
+            <h2 class="exercise-title">Pair ou impair?</h2>
+            <div class="centered-content">
+                <input type="text" placeholder="Saisir un nombre" id="ex1-user-input">
+            </div>
+            <div class="centered-content">
+                <button type="button" id="odd-or-even" onclick="displayOddOrEven()">Exécuter</button>
+            </div>
+            <div class="centered-content" id="demande1"></div>
+        </section>
+        
+        <!-- Exercice 2: Division par 7 -->
+        <section>
+            <h2 class="exercise-title">Division par 7</h2>
+            <div class="centered-content">
+                <input type="text" placeholder="Saisir un nombre limite" id="ex2-user-input">
+            </div>
+            <div class="centered-content">
+                <button type="button" id="division-by-7">Exécuter</button>
+            </div>
+            <div id="demande2"></div>
+            <script src="scripts/divsionBy7.js"></script>
+        </section>
+
+        <!-- Exercice 3: Pair ou impair jusqu'à limite -->
+        <section>
+            <h2 class="exercise-title">Pair ou impair? (Limite)</h2>
+            <div class="centered-content">
+                <input type="text" placeholder="Saisir un nombre limite" id="ex3-user-input">
+            </div>
+            <div class="centered-content">
+                <button type="button" id="odd-or-even-limit">Exécuter</button>
+            </div>
+            <div id="demande3"></div>
+            <script src="scripts/oddOrEvenLimit.js"></script>
+        </section>
+
+        <!-- Exercice 4: Multiples d'un nombre jusqu'à limite -->
+        <section>
+            <h2 class="exercise-title">Multiple jusqu'à une limite</h2>
+            <div class="centered-content">
+                <input type="text" placeholder="Saisir un nombre" id="ex4-user-input1">
+            </div>
+            <div class="centered-content">
+                <input type="text" placeholder="Saisir une limite" id="ex4-user-input2">
+            </div>
+            <div class="centered-content">
+                <button type="button" onclick="displayMultiples()" id="multiple-limit">Valider limite</button>
+            </div>
+            <div class="centered-content" id="demande4"></div>
+            <script src="scripts/multiples.js"></script>
+        </section>
+
+        <!-- Exercice 5: Nombre premier? -->
+        <section>
+            <h2 class="exercise-title">Nombre premier?</h2>
+            <div class="centered-content">
+                <input type="text" placeholder="Saisir un nombre" id="ex5-user-input">
+            </div>
+            <div class="centered-content">
+                <button type="button" id="prime-number">Valider</button>
+            </div>
+            <div class="centered-content" id="demande5"></div>
+            <script src="scripts/primeNumber.js"></script>
+        </section>
+        
+        <!-- Exercice 6: Déterminer tous les nombres premiers jusqu'à limite -->
+        <section>
+            <h2 class="exercise-title">Nombres premiers jusqu'à limite</h2>
+            <div class="centered-content">
+                <input type="text" placeholder="Saisir un nombre limite" id="ex6-user-input">
+            </div>
+            <div class="centered-content">
+                <button type="button" id="prime-number-limit">Valider</button>
+            </div>
+            <div class="centered-content" id="demande6"></div>
+            <script src="scripts/primeNumberLimit.js"></script>
+        </section>
+
+        <!-- Navigation -->
+        <div>
+            <a href="ranking.html">
+                <h5>Go to cryptocurrency ranking</h5>
+            </a>
+            <a href="descriptions.html">
+                <h5>Go to descriptions</h5>
+            </a>
         </div>
-        <div class="centered-content">
-            <button type="button" id="odd-or-even">Exécuter</button>
-        </div>
-        <div id="demande1"></div>
         <script src="scripts/oddOrEven.js"></script>
-    </section>
+
+    </body>
     
-    <!-- Exercice 2: Division par 7 -->
-    <section >
-        <h2 class="exercise-title">Division par 7</h2>
-        <div class="centered-content">
-            <input 
-                type="text" 
-                placeholder="Saisir un nombre limite" 
-                id="ex2-user-input"
-            >
-        </div>
-        <div class="centered-content">
-            <button type="button" id="division-by-7">Exécuter</button>
-        </div>
-        <div id="demande2"></div>
-        <script src="scripts/divsionBy7.js"></script>
-    </section>
-
-    <!-- Exercice 3: Pair ou impair jusqu'à limite -->
-    <section>
-        <h2 class="exercise-title">Pair ou impair? (Limite)</h2>
-        <div class="centered-content">
-            <input 
-                type="text" 
-                placeholder="Saisir un nombre limite" 
-                id="ex3-user-input"
-            >
-        </div>
-        <div class="centered-content">
-            <button type="button" id="odd-or-even-limit">Exécuter</button>
-        </div>
-        <div id="demande3"></div>
-        <script src="scripts/oddOrEvenLimit.js"></script>
-    </section>
-
-    <!-- Navigation -->
-    <div>
-        <a href="ranking.html">
-            <h5>Go to cryptocurrency ranking</h5>
-        </a>
-        <a href="descriptions.html">
-            <h5>Go to descriptions</h5>
-        </a>
-    </div>
-</body>
-</html>
+    </html>
