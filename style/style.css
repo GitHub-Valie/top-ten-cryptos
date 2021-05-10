@@ -32,9 +32,39 @@ body {
     background-clip: content-box, border-box;    
 }
 
+.button-gradient-alt {
+    /* Pour arrondir les bords du bouton */
+    border-radius: 0.3rem; 
+    /* Pour ajouter une ombre 2px portée d'ombre, 100px pour couvrir le bouton / inset pour une ombre intérieure*/
+    box-shadow: 2px 100px 1px #0f1123 inset;
+    /* Couleur du texte */
+    color: #eeeeee;
+    /* Marge et espacement */
+    margin: 1rem;
+    padding: 0.75rem;
+    /* Police */
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    /* Bordure dégradée, transparent pour appliquer un background-clip*/
+    border: solid 3px transparent;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0), 
+        rgba(255, 255, 255, 0)
+    ), linear-gradient(75deg, #78e4ff, #78ffd7);
+    transition: 0.3s;
+    /* Déterminer l'origine du fond du bouton (le dégradé) */
+    background-origin: border-box;
+    /* Façon dont le background s'étend sous la bordure */
+    background-clip: content-box, border-box;    
+}
+
 /* hover over button */
 .button-gradient:hover {
     color: #78e4ff;
+}
+
+.button-gradient-alt:hover {
+    color: #78ffd7;
 }
 
 /* class to center content */
@@ -118,6 +148,10 @@ p {
 
 section {
     margin: 75px;
+}
+
+.sub-title {
+    color:#78e4ff;
 }
 
 table {
