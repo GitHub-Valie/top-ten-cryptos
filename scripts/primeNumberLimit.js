@@ -2,6 +2,9 @@
 
 var affichage = function () {
 
+    // Effacer la zone d'affichage
+    document.getElementById('demande6').innerHTML = '';
+
     // Saisie d'un nombre inputLimit par le user
     let inputLimit = document.getElementById("ex6-user-input").value;
     document.getElementById('demande6').innerHTML += '1 est premier' + '<br>';

@@ -14,120 +14,21 @@
     </head>
 
     <body>
-        <h1 class="main-title">Algorithmie JS</h1>
-
-        <!-- Exercice 1: Pair ou impair? -->
-        <section>
-            <h2 class="exercise-title">Pair ou impair?</h2>
-            <p class="centered-content">Savoir si un nombre est pair ou impair</p>
-            <div class="centered-content">
-                <input type="text" placeholder="Saisir un nombre" id="ex1-user-input">
-            </div>
-            <div class="centered-content">
-                <button class="button-gradient" type="button" id="odd-or-even" onclick="displayOddOrEven()">Exécuter</button>
-            </div>
-            <div class="centered-content" id="demande1"></div>
-        </section>
-        
-        <!-- Exercice 2: Division par 7 -->
-        <section>
-            <h2 class="exercise-title">Division par 7</h2>
-            <p class="centered-content">Trouve tous les multiples de 7 jusqu'à la limite spécifiée</p>
-            <div class="centered-content">
-                <input type="text" placeholder="Saisir un nombre limite" id="ex2-user-input">
-            </div>
-            <div class="centered-content">
-                <button class="button-gradient" type="button" id="division-by-7">Exécuter</button>
-            </div>
-            <div class="centered-content" id="demande2"></div>
-            <script src="scripts/divsionBy7.js"></script>
-        </section>
-
-        <!-- Exercice 3: Pair ou impair jusqu'à limite -->
-        <section>
-            <h2 class="exercise-title">Pair ou impair? (Limite)</h2>
-            <p class="centered-content">Donne les nombres pairs et impairs jusqu'à la limite spécifiée</p>
-            <div class="centered-content">
-                <input type="text" placeholder="Saisir un nombre limite" id="ex3-user-input">
-            </div>
-            <div class="centered-content">
-                <button class="button-gradient" type="button" id="odd-or-even-limit">Exécuter</button>
-            </div>
-            <div class="centered-content" id="demande3"></div>
-            <script src="scripts/oddOrEvenLimit.js"></script>
-        </section>
-
-        <!-- Exercice 4: Multiples d'un nombre jusqu'à limite -->
-        <section>
-            <h2 class="exercise-title">Multiple jusqu'à une limite</h2>
-            <p class="centered-content">Donne tous les multiples du nombre spécifié, jusqu'à une limite spécifiée.</p>
-            <!-- Une div pour chaque input -> alignement vertical -->
-            <div class="centered-content">
-                <input type="text" placeholder="Saisir un nombre" id="ex4-user-input1">
-            </div>
-            <div class="centered-content">
-                <input type="text" placeholder="Saisir une limite" id="ex4-user-input2">
-            </div>
-            <div class="centered-content">
-                <button class="button-gradient" type="button" onclick="displayMultiples()" id="multiple-limit">Valider limite</button>
-            </div>
-            <div class="centered-content" id="demande4"></div>
-            <script src="scripts/multiples.js"></script>
-        </section>
-
-        <!-- Exercice 5: Nombre premier? -->
-        <section>
-            <h2 class="exercise-title">Nombre premier?</h2>
-            <p class="centered-content">Ce test ne fonctionne qu'à la première saisie</p>
-            <p class="centered-content">Pour la reproduction du bug, saisir un nombre qui n'est pas premier, puis un nombre premier. Par exemple 9 puis 7.</p>
-            <div class="centered-content">
-                <input type="text" placeholder="Saisir un nombre" id="ex5-user-input">
-            </div>
-            <div class="centered-content">
-                <button class="button-gradient" type="button" id="prime-number">Valider</button>
-            </div>
-            <div class="centered-content" id="demande5"></div>
-            <script src="scripts/primeNumber.js"></script>
-        </section>
-        
-        <!-- Exercice 6: Déterminer tous les nombres premiers jusqu'à limite -->
-        <section>
-            <h2 class="exercise-title">Nombres premiers jusqu'à limite</h2>
-            <p class="centered-content">Détermine tous les nombres premiers jusqu'à une limite à spécifier.</p>
-            <div class="centered-content">
-                <input type="text" placeholder="Saisir un nombre limite" id="ex6-user-input">
-            </div>
-            <div class="centered-content">
-                <button class="button-gradient" type="button" id="prime-number-limit">Valider</button>
-            </div>
-            <div class="centered-content" id="demande6"></div>
-            <script src="scripts/primeNumberLimit.js"></script>
-        </section>
-
-        <!-- Exercice7: Trier 3 nombres saisis par l'utilisateur -->
-        <section>
-            <h2 class="exercise-title">Trier 3 nombres</h2>
-            <p class="centered-content">Trie trois nombres à spécifier.</p>
-            <!-- 3 inputs dans une même div -> alignement horizontal -->
-            <div class="centered-content">
-                <input type="text" placeholder="Saisir un nombre" id="ex7-user-input1">
-                <input type="text" placeholder="Saisir un nombre" id="ex7-user-input2">
-                <input type="text" placeholder="Saisir un nombre" id="ex7-user-input3">
-            </div>
-            <div class="centered-content">
-                <button class="button-gradient" type="button" id="sort-numbers">Valider les trois nombres</button>
-            </div>
-            <div class="centered-content" id="demande7"></div>
-            <script src="scripts/numberSorting.js"></script>
-        </section>
+        <h1 class="main-title">Main menu</h1>
 
         <!-- Navigation -->
         <div>
-            <a href="ranking.html">
-                <h5>Go to cryptocurrency ranking</h5>
+            <a href="algorithmie.html">
+                <h5>Go to algorithmie</h5>
             </a>
             <a href="descriptions.html">
                 <h5>Go to descriptions</h5>
+            </a>
+            <a href="exposes.html">
+                <h5>Go to exposés</h5>
+            </a>
+            <a href="ranking.html">
+                <h5>Go to cryptocurrency ranking</h5>
             </a>
         </div>
         

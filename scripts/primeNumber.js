@@ -3,6 +3,9 @@ let isPrimeNumber = true;
 
 var affichage = function () {
 
+    // Effacer la zone d'affichage
+    document.getElementById('demande5').innerHTML = '';
+
     let inputNumber = document.getElementById("ex5-user-input").value;
     // départ   // fin               // incrémentation/décrémentation
     for (let i = 2; i <= inputNumber - 1; i += 1) { // tant que i = 2 et plus petit que inputNumber - 1, la boucle ajoute 1 à i

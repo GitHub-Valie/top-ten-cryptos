@@ -1,6 +1,11 @@
+// Affiche les nombres pairs et impairs jusqu'à une limite
+
 var affichage = function () {
 
     var limit = document.getElementById("ex3-user-input").value;
+
+    // Effacer la zone d'affichage
+    document.getElementById('demande3').innerHTML = '';
 
     for (let i=0; i<=limit; i++) {
         if (i === 0) {

@@ -6,8 +6,11 @@ const displayMultiples = () => {
     const inputNumber = document.getElementById("ex4-user-input1").value;
     // Input2: User limit
     const inputLimit = document.getElementById("ex4-user-input2").value;
-    // Algorithm
 
+    // Effacer la zone d'affichage
+    document.getElementById('demande4').innerHTML = '';
+
+    // Algorithm
     for (let i = 1; i <= inputLimit; i += 1) {
         if (i % inputNumber === 0) {
             document.getElementById('demande4').innerHTML += i + " est divisible par " + inputNumber + '<br>';
