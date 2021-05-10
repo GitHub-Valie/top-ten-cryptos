@@ -6,14 +6,14 @@
 // Définition de la fonction "affichage"
 var affichage = function () {
 
-    var nombre = document.getElementById("user-input").value;
+    var nombre = document.getElementById("ex10-user-input").value;
     var somme_des_diviseurs = 0; // Pour l'instant, pas de diviseurs
 
     // Effacer la zone d'affichage
-    document.getElementById("demande").innerHTML = '';
+    document.getElementById("demande10").innerHTML = '';
 
     // Affichage du nombre saisi
-    document.getElementById("demande").innerHTML += "Nombre saisi: " + nombre + '<br>';
+    document.getElementById("demande10").innerHTML += "Nombre saisi: " + nombre + '<br>';
 
     // Algorithme
 
@@ -22,12 +22,12 @@ var affichage = function () {
         // On regarde si i divise le nombre
         if (nombre % i === 0) {
             somme_des_diviseurs = somme_des_diviseurs + i;
-            document.getElementById('demande').innerHTML += i + " est un diviseur." + '<br>';
+            document.getElementById('demande10').innerHTML += i + " est un diviseur." + '<br>';
         } else {
             // rien
         }
     }
-    document.getElementById('demande').innerHTML += "La somme des diviseurs de " + nombre + " (sauf lui même) vaut " + somme_des_diviseurs + '.<br>';
+    document.getElementById('demande10').innerHTML += "La somme des diviseurs de " + nombre + " (sauf lui même) vaut " + somme_des_diviseurs + '.<br>';
 };
 
 // Le script écoute le clic du bouton sur la page HTML 
