@@ -2,15 +2,15 @@
 
 var affichage = function () {
 
-    var inputNumber1 = document.getElementById("ex7-user-input1").value;
-    var inputNumber2 = document.getElementById("ex7-user-input2").value;
-    var inputNumber3 = document.getElementById("ex7-user-input3").value;
+    const inputNumber1 = document.getElementById("ex7-user-input1").valueAsNumber;
+    const inputNumber2 = document.getElementById("ex7-user-input2").valueAsNumber;
+    const inputNumber3 = document.getElementById("ex7-user-input3").valueAsNumber;
 
     // Effacer la zone d'affichage
     document.getElementById('demande7').innerHTML = '';
 
     if (inputNumber1 > inputNumber2) { // inputNumber1 > inputNumber2
-        
+
         document.getElementById('demande7').innerHTML += inputNumber1 + " est plus grand que " + inputNumber2;
         
         if (inputNumber1 > inputNumber3) { // inputNumber 1 > inputNumber2 & inputNumber3
@@ -27,12 +27,11 @@ var affichage = function () {
 
         } else { // inputNumber3 > inputNumber1 > inputNumber2
 
-            document.getElementById('demande7').innerHTML += inputNumber1 + " est plus grand que " + inputNumber2 + " qui est plus petit que " + inputNumber3;
+            document.getElementById('demande7').innerHTML += " qui est plus petit que " + inputNumber3;
 
         }
 
     } else { // inputNumber1 < inputNumber2
-
         document.getElementById('demande7').innerHTML += inputNumber1 + " est plus petit que " + inputNumber2;
 
         if (inputNumber2 > inputNumber3) { // inputNumber2 > inputNumber3 & inputNumber2 > inputNumber1
