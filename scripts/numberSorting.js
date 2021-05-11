@@ -32,6 +32,7 @@ var affichage = function () {
         }
 
     } else { // inputNumber1 < inputNumber2
+        
         document.getElementById('demande7').innerHTML += inputNumber1 + " est plus petit que " + inputNumber2;
 
         if (inputNumber2 > inputNumber3) { // inputNumber2 > inputNumber3 & inputNumber2 > inputNumber1
@@ -51,6 +52,7 @@ var affichage = function () {
             document.getElementById('demande7').innerHTML += " qui est plus petit que " + inputNumber3;
 
         }
+        
     }
 
     document.getElementById('demande7').innerHTML += '<br>';
