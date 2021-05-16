@@ -55,7 +55,8 @@ body {
     /* Déterminer l'origine du fond du bouton (le dégradé) */
     background-origin: border-box;
     /* Façon dont le background s'étend sous la bordure */
-    background-clip: content-box, border-box;    
+    background-clip: content-box, border-box;
+    width: 300px;    
 }
 
 /* hover over button */

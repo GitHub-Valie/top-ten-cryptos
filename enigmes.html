@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/style-enigmes.css">
+
+        <title>Les énigmes du Sultan</title>
+        
+    </head>
+
+    <body>
+
+        <section>
+
+            <!-- Section présentation -->
+            <section>
+    
+                <!-- Titre principal -->
+                <div>
+                    <h1>Les énigmes du Sultan</h1>
+                </div>
+
+                <div>
+
+                    <h2>Description</h2>
+
+                    <p>
+                        Dans les cachots du sultanat, deux cellules de prison dont on ne peut voir l'intérieur sont occupées par un tigre et une princesse.
+                    </p>
+
+                    <p>
+                        Vous incarnez un prisonnier et êtes confronté au Sultan. 
+                        Le Sultan a fait poser des affiches sur chaque porte de cellule, dont les messages sont sous forme d'énigmes.
+                        Les <em>assertions du Sultan</em>, qui ne ment jamais, ainsi que les messages des affiches, sont votre seule indication pour deviner qui de la princesse ou du tigre est dans la cellule et ainsi choisir la bonne cellule.
+                    </p>
+
+                </div>
+    
+            </section>
+
+            <!-- Enigme 1 -->
+            <section class="container">
+                
+                <!-- Enigme -->
+                <div>
+                    <h2>Première énigme</h2>
+                </div>
+    
+                <!-- Enoncé -->
+                <div>
+                    <p class="assertion">Une des deux affiches dit la vérité, l'autre ment.</p>
+                </div>
+
+                <div class="wrapper">
+
+                    <!-- Affiche 1 -->
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 1</h3>
+    
+                            <p class="message">Il y a une princesse dans cette cellule et un tigre dans l'autre</p>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- Affiche 2 -->
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 2</h3>
+    
+                            <p class="message">Il y a une princesse dans une cellule et un tigre dans l'autre</p>
+                            
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                <!-- Réponse -->
+                <div>
+                    <h2>Réponse</H2>
+
+                    <p>
+                        La première affiche ne peut être vraie que si la seconde est fausse.
+                        Or il est impossible de prouver que cette seconde affiche est fausse. 
+                        Par élimination, la seconde affiche est donc celle qui dit la vérité, et la première est celle qui ment.
+                        Par conséquent, le tigre est dans la première cellule, et la princesse est enfermée dans la seconde.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Enigme 2 -->
+            <section class="container">
+
+                <!-- Enigme -->
+                <div>
+                    <h2>Seconde énigme</h2>
+                </div>
+
+                <!-- Enoncé -->
+                <div>
+                    <p class="assertion">Les deux affiches sont vraies, ou les deux mentent.</p>
+                </div>
+
+                <div class="wrapper">
+
+                    <!-- Affiche 1 -->
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 1</h3>
+    
+                            <p class="message">Au moins une des deux cellules contient une princesse</p>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- Affiche 2 -->
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 2</h3>
+    
+                            <p class="message">Il y a un tigre dans l'autre cellule</p>
+                            
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                <!-- Réponse -->
+                <div>
+                    <h2>Réponse</h2>
+
+                    <p>
+                        Pour trouver si les deux affiches disent vrai ou si elles mentent, on propose un raisonnement sous forme de tableau répertoriant tous les cas possibles:
+                        Les deux cellules contiennent un tigre, les deux cellules contiennent une princesse, la première cellule contient une princesse et l'autre un tigre ou vice-versa.
+                    </p>
+
+                    <p>
+                        En croisant les informations des deux affiches, il sera possible de les confronter à l'assertion du Sultan.
+                    </p>
+
+                    <table>
+                        <tr>
+                            <th>Cellule 1</th>
+                            <th>Cellule 2</th>
+                            <th>Affiche 1</th>
+                            <th>Affiche 2</th>
+                            <th>Assertion</th>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>P</td>
+                            <td>Vrai</td>
+                            <td>Faux</td>
+                            <td>Incompatible</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>T</td>
+                            <td>Vrai</td>
+                            <td>Faux</td>
+                            <td>Incompatible</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>P</td>
+                            <td>Vrai</td>
+                            <td>Vrai</td>
+                            <td>Compatible</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>T</td>
+                            <td>Faux</td>
+                            <td>Vrai</td>
+                            <td>Incompatible</td>
+                        </tr>
+                    </table>
+
+                    <p>
+                        Le seul cas de figure qui n'est contredit par aucune des deux affiches est le cas où 
+                        le tigre est dans la première cellule (validé par le message de l'affiche 2) et la 
+                        princesse dans la seconde cellule (valide du point de vue du message de l'affiche 1). 
+                    </p>
+
+                    <p>
+                        Les deux affiches sont vraies et vous devez ouvrir la porte de la deuxième cellule 
+                        si vous souhaitez rester en vie.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- Enigme 3 -->
+            <section class="container">
+
+                <div>
+                    <h2>Troisième énigme</h2>
+                </div>
+
+                <!-- Enoncé -->
+                <div>
+                    <p class="assertion">Les deux affiches sont vraies, ou les deux mentent.</p>
+                </div>
+
+                <div class="wrapper">
+
+                    <!-- Affiche 1 -->
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 1</h3>
+    
+                            <p class="message">Il y a un tigre dans cette cellule, ou une princesse dans l'autre cellule</p>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- Affiche 2 -->
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 2</h3>
+    
+                            <p class="message">Il y a une princesse dans l'autre cellule</p>
+                            
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                <!-- Réponse -->
+                <div>
+                    <h2>Réponse</h2>
+
+                    <p>
+                        L'affiche 1 sera toujours vraie, sauf dans le cas ou il y a une princesse dans la première cellule et un tigre dans la seconde.
+                    </p>
+
+                    <p>
+                        L'affiche 2 sera toujours fausse, sauf dans les cas où il y a une princesse dans la première cellule.
+                    </p>
+
+                    <p>
+                        En croisant les informations des deux affiches, le seul cas compatible avec l'assertion du Sultan est celui où 
+                        il y a une princesse dans chaque cellule. Pour s'en convaincre ...
+                    </p>
+
+                    <table>
+                        <tr>
+                            <th>Cellule 1</th>
+                            <th>Cellule 2</th>
+                            <th>Affiche 1</th>
+                            <th>Affiche 2</th>
+                            <th>Assertion</th>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>P</td>
+                            <td>Vrai</td>
+                            <td>Vrai</td>
+                            <td>Compatible</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>T</td>
+                            <td>Faux</td>
+                            <td>Vrai</td>
+                            <td>Incompatible</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>P</td>
+                            <td>Vrai</td>
+                            <td>Faux</td>
+                            <td>Incompatible</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>T</td>
+                            <td>Vrai</td>
+                            <td>Faux</td>
+                            <td>Incompatible</td>
+                        </tr>
+                    </table>
+
+                    <p>
+                        Pour rester en vie, vous pouvez choisir n'importe quelle cellule.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- Enigme 4 -->
+            <section class="container">
+
+                <div>
+                    <h2>Quatrième énigme</h2>
+                </div>
+
+                <!-- Enoncé -->
+                <div>
+                    <p class="assertion">
+                        Si la première cellule contient une princesse, l'affiche dit vrai. Si elle contient un tigre, l'affiche ment.
+                    </p>
+                    <p class="assertion">
+                        Si la deuxième cellule contient un tigre, l'affiche dit vrai. Si elle contient une princesse, l'affiche ment.
+                    </p>
+                </div>
+
+                <div class="wrapper">
+
+                    <!-- Affiche 1 -->
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 1</h3>
+    
+                            <p class="message">Les deux cellules contiennent des princesses</p>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- Affiche 2 -->
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 2</h3>
+    
+                            <p class="message">Les deux cellules contiennent des princesses</p>
+                            
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                <!-- Réponse -->
+                <div>
+                    <h2>Réponse</h2>
+
+                    <p>
+                        L'affiche 1 dit vrai seulement si sa cellule contient une princesse.
+                        L'affiche 2 dit vrai seulement si sa cellule contient un tigre.
+                    </p>
+                    
+                    <table>
+                        <tr>
+                            <th>Cellule 1</th>
+                            <th>Cellule 2</th>
+                            <th>Affiche 1</th>
+                            <th>Affiche 2</th>
+                            <th>Assertion</th>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>P</td>
+                            <td>Vrai</td>
+                            <td>Ment</td>
+                            <td>Incompatible</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>T</td>
+                            <td>Vrai</td>
+                            <td>Vrai</td>
+                            <td>Compatible</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>P</td>
+                            <td>Ment</td>
+                            <td>Ment</td>
+                            <td>Incompatible</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>T</td>
+                            <td>Ment</td>
+                            <td>Vrai</td>
+                            <td>Incompatible</td>
+                        </tr>
+                    </table>
+
+                    <p>
+                        Grâce à l'assertion du Sultan, on sait que les deux affiches disent vrai (les deux cellules contiennent une princesse)
+                        lorsque la première cellule contient une princesse et la seconde contient un tigre.
+                    </p>
+                    <p>
+                        Autrement dit, pour que les deux cellules contiennent des princesses, la deuxième cellule doit contenir un tigre: c'est impossible.
+                        Le message, identique aux deux affiches, était donc mensonger: les deux affiches mentent.
+                    </p>
+                    <p>
+                        On en déduit qu'il y a un tigre dans la première cellule, et une princesse dans la deuxième.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Enigme 5 -->
+            <section class="container">
+
+                <div>
+                    <h2>Cinquième énigme</h2>
+                </div>
+
+                <!-- Enoncé -->
+                <div>
+                    <p class="assertion">Si la première cellule contient une princesse, l'affiche dit vrai. Si elle contient un tigre, l'affiche ment.</p>
+                    <p class="assertion">Si la deuxième cellule contient un tigre, l'affiche dit vrai. Si elle contient une princesse, l'affiche ment.</p>
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 1</h3>
+    
+                            <p class="message">Au moins une cellule contient une princesse</p>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 2</h3>
+    
+                            <p class="message">L'autre cellule contient une princesse</p>
+                            
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                <div>
+                    <p>Réponse</p>
+
+                    <p>
+                        L'affiche 1 dit vrai dans deux cas de figure: si la cellule 1 ou la cellule 2 contient une princesse ; si la cellule 1 et la cellule 2 contient une princesse.
+                        Autrement dit, elle dit toujours vrai sauf quand il y a deux tigres.
+                    </p>
+                    <p>
+                        L'affiche 2 dit vrai seulement si la cellule 1 contient une princesse.
+                    </p>
+                    <p>
+                        On compare les combinaisons de cellules possibles aux messages respectifs des affiches 
+                    </p>
+
+                    <table>
+                        <tr>
+                            <th>Cellule 1</th>
+                            <th>Cellule 2</th>
+                            <th>Affiche 1</th>
+                            <th>Affiche 2</th>
+                            <th>Assertion</th>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>P</td>
+                            <td>Vrai</td>
+                            <td>Vrai</td>
+                            <td>Compatible</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>T</td>
+                            <td>Vrai</td>
+                            <td>Vrai</td>
+                            <td>Compatible</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>P</td>
+                            <td>Vrai</td>
+                            <td>Ment</td>
+                            <td>Incompatible</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>T</td>
+                            <td>Ment</td>
+                            <td>Ment</td>
+                            <td>Incompatible</td>
+                        </tr>
+                    </table>
+
+                    <p>
+                        Grâce à l'assertion du Sultan, on sait que les deux affiches disent vrai 
+                        lorsque la cellule 1 contient une princesse et que la cellule 2 contient un tigre.
+                    </p>
+                    <p>
+                        Autrement dit, pour qu'au moins une cellule contienne une princesse et que la cellule 1 contienne une princesse,
+                        il faut que la cellule 1 contienne une princesse et que la cellule 2 contienne un tigre.
+                    </p>
+                    <p>
+                        Après prise en compte de l'assertion du Sultan, on sait qu'il y a une princesse dans la cellule 1 et un tigre dans la cellule 2.
+                        On choisit donc d'ouvrir la porte de la première cellule.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Enigme 6 -->
+            <section class="container">
+
+                <div>
+                    <h2>Sixième énigme</h2>
+                </div>
+
+                <!-- Enoncé -->
+                <div>
+                    <p class="assertion">Si la première cellule contient une princesse, l'affiche dit vrai. Si elle contient un tigre, l'affiche ment.</p>
+                    <p class="assertion">Si la deuxième cellule contient un tigre, l'affiche dit vrai. Si elle contient une princesse, l'affiche ment.</p>
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 1</h3>
+    
+                            <p class="message">Choisis n'importe quelle cellule</p>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 2</h3>
+    
+                            <p class="message">Il y a une princesse dans l'autre cellule</p>
+                            
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                <!-- Réponse -->
+                <div>
+                    <p>Réponse</p>
+
+                    <p>
+                        On peut choisir n'importe quelle cellule lorsqu'il y a une princesse dans la première cellule.
+                        Mais pour qu'il y ait une princesse dans la première cellule (donc, pour pouvoir choisir n'importe quelle cellule), 
+                        il faut qu'il y ait un tigre dans la deuxième: cela n'a pas de sens.
+                    </p>
+                    <p>
+                        Le message de l'affiche 1 est mensonger: on ne peut pas choisir n'importe quelle cellule et par conséquent,
+                        il y a un tigre dans cette première cellule. Le fait qu'il y ait un tigre dans la cellule 1 invalide le message de l'affiche 2.
+                    </p>
+                    <p>
+                        Il y a donc une princesse dans la deuxième cellule, et c'est celle qu'il faudra choisir.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Enigme 7 -->
+            <section class="container">
+
+                <div>
+                    <h2>Septième énigme</h2>
+                </div>
+
+                <!-- Enoncé -->
+                <div>
+                    <p class="assertion">Si la première cellule contient une princesse, l'affiche dit vrai. Si elle contient un tigre, l'affiche ment.</p>
+                    <p class="assertion">Si la deuxième cellule contient un tigre, l'affiche dit vrai. Si elle contient une princesse, l'affiche ment.</p>
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 1</h3>
+    
+                            <p class="message">Choisis bien ta cellule, cela a une importance</p>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 2</h3>
+    
+                            <p class="message">Tu ferais mieux de choisir l'autre cellule</p>
+                            
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                <!-- Réponse -->
+                <div>
+                    <p>Réponse</p>
+
+                    <p>
+                        Selon le message de l'affiche 1 ...
+                    </p>
+
+                    <p>
+                        Lorsque la cellule 1 contient une princesse, il importe de bien choisir sa cellule. 
+                        En revanche, lorsque le choix de cellule n'est pas important (lorsque l'affiche ment), la cellule 1 contient un tigre: ce qui n'a pas de sens.
+                    </p>
+
+                    <p>
+                        L'affiche 1 ment et contient un tigre. Ceci est confirmé par le message de l'affiche 2 qui est également mensonger: 
+                        Celui-ci nous conseille de choisir la cellule 1, qui contient un tigre. Or quand l'affiche 2 ment, sa cellule contient une princesse. 
+                    </p>
+
+                    <p>
+                        La cellule 1 contient un tigre et la cellule 2, une princesse. Il faut donc choisir la seconde cellule.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Enigme 8 -->
+            <section class="container">
+
+                <div>
+                    <h2>Dernière énigme</h2>
+                </div>
+
+                <!-- Enoncé -->
+                <div>
+                    <p>Pour cette énigme, les affiches ne sont pas collées sur les portes.</p>
+
+                    <p class="assertion">Je ne vais pas vous dire quelle affiche sera collée sur quelle porte, car vous en savez assez pour vous débrouiller seul.</p>
+                    <p class="assertion">Mais les règles fournies pour les quatre énigmes précédentes restent vraies.</p>
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 1</h3>
+    
+                            <p class="message">Les deux cellules contiennent des tigres</p>
+    
+                        </div>
+    
+                    </div>
+    
+                    <div class="card">
+    
+                        <div class="container">
+    
+                            <h3>Affiche 2</h3>
+    
+                            <p class="message">Cette cellule contient un tigre</p>
+                            
+                        </div>
+    
+                    </div>
+
+                </div>
+
+                <!-- Réponse -->
+                <div>
+                    <p>Réponse</p>
+
+                    <p>
+                        On rappelle les règles des 4 dernières énigmes:
+                    </p>
+
+                    <p>
+                        Si la première cellule contient une princesse, l'affiche dit vrai. Si elle contient un tigre, l'affiche ment.
+                    </p>
+
+                    <p>
+                        Si la deuxième cellule contient un tigre, l'affiche dit vrai. Si elle contient une princesse, l'affiche ment.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <section>
+            <div>
+                Placeholder navigation
+            </div>
+        </section>
+        
+    </body>
+
+</html>

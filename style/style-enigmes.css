@@ -1,0 +1,100 @@
+body {
+    background: #0c072b;
+    /* background: #FFFAE5; */
+    /* background: #E9E7F1; */
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+/* Titre principal */
+h1 {
+    font-family: 'Rakkas', cursive;
+    font-size: xx-large;
+    font-weight: inherit;
+    text-align: center;
+    /* color: #241676;    */
+    /* color: #E9E7F1; */
+    color: goldenrod;
+}
+
+/* Sous-titres: Description, N° d'énigme */
+h2 {
+    font-family: 'Rakkas', cursive;
+    font-size: x-large;
+    font-weight: inherit;
+    text-align: center;
+    /* color: #241676;    */
+    /* color: #E9E7F1;   */
+    color: goldenrod;
+}
+
+/* Affiche 1 / Affiche 2 */
+h3 {
+    font-family: 'Rakkas', cursive;
+    font-size: large;
+    text-align: center;
+    font-weight: inherit;
+    color: #0c072b;   
+    /* color: #E9E7F1;   */
+}
+
+/* Paragraphes: Assertions, messages, réponses */
+p {
+    font-family: 'Rakkas', cursive;
+    /* color: goldenrod; */
+    color: #E9E7F1;
+    /* font-family: 'Cairo', sans-serif; */
+    /* color: #241676; */
+    text-align: center;
+}
+
+em {
+    color:lightskyblue;
+}
+
+table {
+    font-family: 'Rakkas', cursive;
+    color: #E9E7F1;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Classe spécifique pour les assertions */
+.assertion {
+    font-family: 'Rakkas', cursive;
+    font-style: oblique;
+    text-align: center;
+    color: lightskyblue;
+    /* color: goldenrod; */
+    /* color: #fffae5; */
+    /* color: #241676; */
+}
+
+/* Classe spécifique pour les messages */
+.message {
+    font-family: 'Rakkas', cursive;
+    text-align: center;
+    color: #0c072b;
+}
+
+/* Classe spécifique pour les affiches */
+.card {
+    /* background-color: #241676; */
+    background-color: goldenrod;
+    border-radius: 0.25rem;
+    width: 450px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+/* Classe spéciale pour contenir les messages des affiches */
+.container {
+    padding: 2px;
+}
+
+/* Classe spécifique pour centrer les affiches */
+.wrapper {
+    text-align: center;
+}
