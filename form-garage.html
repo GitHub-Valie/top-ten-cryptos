@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prise de rendez-vous</title>
+</head>
+<body>
+
+    <!-- Action: Vers où les données seront postées -->
+    <form method="POST" action="/rendez-vous"> 
+
+        <fieldset>
+
+            <legend>
+                Rendez-vous
+            </legend>
+
+            <!-- Objet du RDV -->
+            <div>
+                <label for="objet">Objet du rendez-vous</label>
+                <select id="objet">
+                    <option>Achat</option>
+                    <option>Entretien</option>
+                    <option>Réparation</option>
+                </select>
+            </div>
+
+            <!-- Date et heure -->
+            <div>
+                <label for="date">Date et heure: </label>
+                <input type="date" required />
+                <input type="time" required />
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>
+                Informations personnelles
+            </legend>
+
+            <!-- Civilité -->
+            <div>
+                <label>Civilité</label>
+
+                <input type="radio" id="monsieur" name="civilité" />
+                <label for="monsieur">M.</label>
+
+                <input type="radio" id="madame" name="civilité" />
+                <label for="madame">Mme</label>
+            </div>
+
+            <!-- Prénom -->
+            <div>
+                <label for="prénom">Prénom: </label>
+                <input type="text" id="prénom" required />
+            </div>
+
+            <!-- Nom -->
+            <div>
+                <label for="nom">Nom: </label>
+                <input type="text" id="nom" required />
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" placeholder="exemple@exemple.fr" required />
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>
+                Coordonnées
+            </legend>
+
+            <!-- Numéro et rue -->
+            <div>
+                <label for="numero">Numéro: </label>
+                <input type="number" id="numero" placeholder="N°" required />
+
+                <label for="rue">Rue: </label>
+                <input type="text" id="rue" placeholder="Rue" required />
+            </div>
+
+            <!-- Code postal et ville -->
+            <div>
+                <label for="cp">Code postal: </label>
+                <input type="number" id="cp" placeholder="CP" required />
+
+                <label for="ville">Ville: </label>
+                <input type="text" id="ville" placeholder="Ville" required />
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>
+                Commentaires
+            </legend>
+
+            <!-- Commentaires -->
+            <div>
+                <label for="commentaire"></label>
+                <textarea id="commentaire" placeholder="Ecrivez ici"></textarea>
+            </div>
+
+
+        </fieldset>
+
+        <!-- Soumettre le formulaire -->
+        <button type="submit">
+            Soumettre
+        </button>
+
+        <!-- Effacer les champs -->
+        <button type="reset">
+            Tout effacer
+        </button>
+
+    </form>
+
+    <a href="index.html">
+        Aller vers l'index
+    </a>
+
+</body>
+
+</html>
