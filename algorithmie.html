@@ -2,26 +2,46 @@
 <html lang="en">
 
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="stylesheet" href="style/style.css">
         <link type="text/css" rel="stylesheet" href="style/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
         <title>Algorithmie JS</title>
+        
+        <!-- Différer le chargement des scripts pour laisser toute la page charger -->
+        <script src="scripts/sugarLumps.js" defer></script>
+        <script src="scripts/divsionBy7.js" defer></script>
+        <script src="scripts/oddOrEvenLimit.js" defer></script>
+        <script src="scripts/multiples.js" defer></script>
+        <script src="scripts/primeNumber.js" defer></script>
+        <script src="scripts/primeNumberLimit.js" defer></script>
+        <script src="scripts/numberSorting.js" defer></script>
+        <script src="scripts/perfectNumber.js" defer></script>
+        <script src="scripts/displayPerfectNumbers.js" defer></script>
+        <script src="scripts/findPerfectNumbers.js" defer></script>
+
     </head>
 
     <body>
 
-        <h1 class="main-title">Algorithmie JS</h1>
+        <header>
+            <h1 class="main-title">Algorithmie JS</h1>
+        </header>
 
-        <!-- Exercices -->
+        <!-- Exercices d'algorithmie -->
         <section>
 
+            <h1 class="main-title">Algorithmes</h1>
+
             <!-- Exercice 0: How many lumps of sugar?-->
-            <section>
+            <article>
                 <h2 class="exercise-title">How many lumps of sugar?</h2>
                 <p class="centered-content">Will give you the perfect amount of sugar lumps for your coffee or tea, <br/> while you spend time playing with these awesome algorithms!</p>
                 <div class="centered-content">
@@ -31,11 +51,10 @@
                     <button class="button-gradient" type="button" id="sugar-lumps">Give me sugar</button>
                 </div>
                 <div class="centered-content" id="demande0"></div>
-                <script src="scripts/sugarLumps.js"></script>
-            </section>
+            </article>
 
             <!-- Exercice 1: Pair ou impair? -->
-            <section>
+            <article>
                 <h2 class="exercise-title">Pair ou impair?</h2>
                 <p class="centered-content">Savoir si un nombre est pair ou impair</p>
                 <div class="centered-content">
@@ -45,10 +64,10 @@
                     <button class="button-gradient" type="button" id="odd-or-even" onclick="displayOddOrEven()">Exécuter</button>
                 </div>
                 <div class="centered-content" id="demande1"></div>
-            </section>
+            </article>
             
             <!-- Exercice 2: Division par 7 -->
-            <section>
+            <article>
                 <h2 class="exercise-title">Division par 7</h2>
                 <p class="centered-content">Trouve tous les multiples de 7 jusqu'à la limite spécifiée</p>
                 <div class="centered-content">
@@ -58,11 +77,10 @@
                     <button class="button-gradient" type="button" id="division-by-7">Exécuter</button>
                 </div>
                 <div class="centered-content" id="demande2"></div>
-                <script src="scripts/divsionBy7.js"></script>
-            </section>
+            </article>
 
             <!-- Exercice 3: Pair ou impair jusqu'à limite -->
-            <section>
+            <article>
                 <h2 class="exercise-title">Pair ou impair? (Limite)</h2>
                 <p class="centered-content">Donne les nombres pairs et impairs jusqu'à la limite spécifiée</p>
                 <div class="centered-content">
@@ -72,11 +90,10 @@
                     <button class="button-gradient" type="button" id="odd-or-even-limit">Exécuter</button>
                 </div>
                 <div class="centered-content" id="demande3"></div>
-                <script src="scripts/oddOrEvenLimit.js"></script>
-            </section>
+            </article>
 
             <!-- Exercice 4: Multiples d'un nombre jusqu'à limite -->
-            <section>
+            <article>
                 <h2 class="exercise-title">Multiple jusqu'à une limite</h2>
                 <p class="centered-content">Donne tous les multiples du nombre spécifié, jusqu'à une limite spécifiée.</p>
                 <!-- Une div pour chaque input -> alignement vertical -->
@@ -90,11 +107,10 @@
                     <button class="button-gradient" type="button" onclick="displayMultiples()" id="multiple-limit">Valider limite</button>
                 </div>
                 <div class="centered-content" id="demande4"></div>
-                <script src="scripts/multiples.js"></script>
-            </section>
+            </article>
 
             <!-- Exercice 5: Nombre premier? -->
-            <section>
+            <article>
                 <h2 class="exercise-title">Nombre premier?</h2>
                 <p class="centered-content">Ce test ne fonctionne qu'à la première saisie</p>
                 <p class="centered-content">Pour la reproduction du bug, saisir un nombre qui n'est pas premier, puis un nombre premier. Par exemple 9 puis 7.</p>
@@ -105,11 +121,10 @@
                     <button class="button-gradient" type="button" id="prime-number">Valider</button>
                 </div>
                 <div class="centered-content" id="demande5"></div>
-                <script src="scripts/primeNumber.js"></script>
-            </section>
+            </article>
             
             <!-- Exercice 6: Déterminer tous les nombres premiers jusqu'à limite -->
-            <section>
+            <article>
                 <h2 class="exercise-title">Nombres premiers jusqu'à limite</h2>
                 <p class="centered-content">Détermine tous les nombres premiers jusqu'à une limite à spécifier.</p>
                 <div class="centered-content">
@@ -119,11 +134,10 @@
                     <button class="button-gradient" type="button" id="prime-number-limit">Valider</button>
                 </div>
                 <div class="centered-content" id="demande6"></div>
-                <script src="scripts/primeNumberLimit.js"></script>
-            </section>
+            </article>
 
             <!-- Exercice7: Trier 3 nombres saisis par l'utilisateur -->
-            <section>
+            <article>
                 <h2 class="exercise-title">Trier 3 nombres</h2>
                 <p class="centered-content">Trie trois nombres à spécifier.</p>
                 <!-- 3 inputs dans une même div -> alignement horizontal -->
@@ -136,12 +150,16 @@
                     <button class="button-gradient" type="button" id="sort-numbers">Valider les trois nombres</button>
                 </div>
                 <div class="centered-content" id="demande7"></div>
-                <script src="scripts/numberSorting.js"></script>
-            </section>
+            </article>
+
+        </section>
+
+        <!-- Algorithmes sur nombres parfaits-->
+        <section>
 
             <h1 class="main-title">Algorithmes sur nombres parfaits</h1>
         
-            <section>
+            <article>
                 <h2 class="exercise-title">Nombres parfaits</h2>
                 <p class="centered-content">Affiche la somme de tous les diviseurs, sauf lui-même, d'un nombre donné par l'utilisateur</p>
                 <div class="centered-content">
@@ -151,10 +169,9 @@
                     <button class="button-gradient" type="button" id="perfect-number">Exécuter</button>
                 </div>
                 <div class="centered-content" id="demande10"></div>
-                <script src="scripts/perfectNumber.js"></script>
-            </section>
+            </article>
     
-            <section>
+            <article>
                 <h2 class="exercise-title">Nombres parfaits II</h2>
                 <p class="centered-content">Trouve si un nombre est parfait ou non.</p>
                 <div class="centered-content">
@@ -164,10 +181,9 @@
                     <button class="button-gradient" type="button" id="perfect-number2">Exécuter</button>
                 </div>
                 <div class="centered-content" id="demande11"></div>
-                <script src="scripts/displayPerfectNumbers.js"></script>
-            </section>
+            </article>
     
-            <section>
+            <article>
                 <h2 class="exercise-title">Nombres parfaits III</h2>
                 <p class="centered-content">Trouve les nombres parfaits, jusqu'à une certaine limite</p>
                 <div class="centered-content">
@@ -177,37 +193,40 @@
                     <button class="button-gradient" type="button" id="perfect-number3">Exécuter</button>
                 </div>
                 <div class="centered-content" id="demande12"></div>
-                <script src="scripts/findPerfectNumbers.js"></script>
-            </section>
-            
+            </article>
+
         </section>
 
-        <!-- Navigation -->
-        <div class="centered-content">
-            <a href="index.html">
-                <button class="button-gradient-alt">Go back to menu</button>
-            </a>
-            <br/>
-            <a href="descriptions.html">
-                <button class="button-gradient-alt">Go to descriptions</button>
-            </a>
-            <br/>
-            <a href="enigmes.html">
-                <button class="button-gradient-alt">Go to Enigmes</button>
-            </a>
-            <br/>
-            <a href="exposes.html">
-                <button class="button-gradient-alt">Go to exposés</button>
-            </a>
-            <br/>
-            <a href="mastermind.html">
-                <button class="button-gradient-alt">Go to Mastermind</button>
-            </a>
-            <br/>
-            <a href="ranking.html">
-                <button class="button-gradient-alt">Go to cryptocurrency ranking</button>
-            </a>
-        </div>
+        <!-- Footer qui intègre la navigation -->
+        <footer>
+            <nav>
+                <div class="centered-content">
+                    <a href="index.html">
+                        <button class="button-gradient-alt">Go back to menu</button>
+                    </a>
+                    <br/>
+                    <a href="descriptions.html">
+                        <button class="button-gradient-alt">Go to descriptions</button>
+                    </a>
+                    <br/>
+                    <a href="ranking.html">
+                        <button class="button-gradient-alt">Go to cryptocurrency ranking</button>
+                    </a>
+                    <br/>
+                    <a href="enigmes.html">
+                        <button class="button-gradient-alt">Go to "énigmes" (FR)</button>
+                    </a>
+                    <br/>
+                    <a href="exposes.html">
+                        <button class="button-gradient-alt">Go to "exposés" (FR)</button>
+                    </a>
+                    <br/>
+                    <a href="mastermind.html">
+                        <button class="button-gradient-alt">Go to Mastermind (FR)</button>
+                    </a>
+                </div>
+            </nav>
+        </footer>
         
         <!-- Il est possible de mettre les scripts en bas du body -->
         <script src="scripts/oddOrEven.js"></script>

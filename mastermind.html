@@ -14,193 +14,204 @@
     </head>
     
     <body>
-        <h1 class="main-title">Analyse de Mastermind</h1>
+
+        <header>
+            <h1 class="main-title">Analyse de Mastermind</h1>
+        </header>
+
         <section>
 
-            <div class="centered-content">
-                <h2 class="sub-title">
-                    Description
-                </h2>
-                <p>
-                    Le Mastermind ou Master Mind est un jeu pour deux joueurs dont le but est de trouver un code (couleur et position de 4 ou 5 pions) en 10 ou 12 essais.
-                </p>
-            </div>
+            <article>
+                <div class="centered-content">
+                    <h2 class="sub-title">
+                        Description
+                    </h2>
+                    <p>
+                        Le Mastermind ou Master Mind est un jeu pour deux joueurs dont le but est de trouver un code (couleur et position de 4 ou 5 pions) en 10 ou 12 essais.
+                    </p>
+                </div>
+            </article>
 
-            <div class="centered-content">
-                <h2 class="sub-title">
-                    Pseudo-code Mastermind
-                </h2>
-            </div>
+            <article>
 
-            <div>
-                <p class="padding-80">
+                <div class="centered-content">
+                    <h2 class="sub-title">
+                        Pseudo-code Mastermind
+                    </h2>
+                </div>
 
-                    <ul>
-                        <p>
-                            Si on prend un jeu de société et qu'on le décompose, on a plusieurs concepts ...
-                        </p>
-                        <li>
-                            Le principe du jeu
-                        </li>
-                        <p>
-                            Le principe du jeu est fondé sur des objets, des paramètres et des variables (partie, plateau, joueur, tour, éléments de jeu tels que: carte/pion/dé/jeton ...) ainsi que des règles qui s'appliquent aux joueurs (role des joueurs, actions du joueur) et qui définissent et organisent les mécanismes de jeu nécessaires à son déroulement.
-                        </p>
-                        <p>
-                            Le principe du Mastermind (version simplifiée du MasterMind):
-                        </p>
+                <div>
+                    <p class="padding-80">
+    
+                        <ul>
+                            <p>
+                                Si on prend un jeu de société et qu'on le décompose, on a plusieurs concepts ...
+                            </p>
+                            <li>
+                                Le principe du jeu
+                            </li>
+                            <p>
+                                Le principe du jeu est fondé sur des objets, des paramètres et des variables (partie, plateau, joueur, tour, éléments de jeu tels que: carte/pion/dé/jeton ...) ainsi que des règles qui s'appliquent aux joueurs (role des joueurs, actions du joueur) et qui définissent et organisent les mécanismes de jeu nécessaires à son déroulement.
+                            </p>
+                            <p>
+                                Le principe du Mastermind (version simplifiée du MasterMind):
+                            </p>
+                            <ul>
+                                <li>
+                                    1 joueur décodeur, le codeur étant incarné par un ordinateur
+                                </li>
+                                <li>
+                                    12 essais/tentatives/tours pour décoder la séquence
+                                </li>
+                                <li>
+                                    La taille de la séquence: 4
+                                </li>
+                                <li>
+                                    Les couleurs possibles: Rouge (R), Vert (V), Bleu (B), Jaune (J) représentées sous forme de lettres, qui peuvent être restylées avec des couleurs ultérieurement grâce à du CSS.
+                                </li>
+                            </ul>
+                            <br/>
+                            <li>
+                                La représentation du jeu
+                            </li>
+                            <p>
+                                Il correspond à la manière dont on décide de représenter/matérialiser le principe du jeu:
+                            </p>
+                            <ul>
+                                <li>
+                                    Structure du plateau
+                                </li>
+                                <li>
+                                    Forme/couleur prise par les éléments de jeu
+                                </li>
+                            </ul>
+                            <p>
+                                La représentation du Mastermind:
+                            </p>
+                            <ul>
+                                <li>
+                                    Une surface (tableau/matrice/grille) de 12 lignes et 4 colonnes
+                                </li>
+                                <li>
+                                    1 ligne représente 1 essai/tour (séquence de 4 couleurs) par exemple : R, V, B, R
+                                </li>
+                            </ul>
+                            <p>
+                                Une représentation (extrêmement) schématique du MasterMind
+                            </p>
+                            <!-- 1	    2	    3       4		Indications			
+                            Tour 1	|   R	|   V	|   B	|   J	|	 1 Correct
+                            ------------------------------------------
+                            Tour 2	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 3	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 4	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 5	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 6	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 7	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 8	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 9	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 10	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 11	|	|	|	|	|
+                            ------------------------------------------
+                            Tour 12	|	|	|	|	|
+    
+    
+                        Inputs du joueur   _R_	   _V_	   _B_     _J_		(Affichage du tour en cours)
+                        
+                        
+                        [Bouton de validation] -->
                         <ul>
                             <li>
-                                1 joueur décodeur, le codeur étant incarné par un ordinateur
+                                Une bordure permettant d'afficher les indices sur le nombre de couleurs bien/mal placées
                             </li>
                             <li>
-                                12 essais/tentatives/tours pour décoder la séquence
-                            </li>
-                            <li>
-                                La taille de la séquence: 4
-                            </li>
-                            <li>
-                                Les couleurs possibles: Rouge (R), Vert (V), Bleu (B), Jaune (J) représentées sous forme de lettres, qui peuvent être restylées avec des couleurs ultérieurement grâce à du CSS.
+                                Affichage des indices: sous forme de texte, qui pourra être restylé avec des couleurs (noir/blanc) ultérieurement grâce à du CSS.
                             </li>
                         </ul>
                         <br/>
                         <li>
-                            La représentation du jeu
+                            La jouabilité/gameplay:
+                        </li>
+        
+                        <p>
+                            Correspond aux interactions entre les joueurs et entre les joueurs et les éléments de jeu: Est-ce qu'il faut lancer des dés? Poser des pions? Avancer des pions? Piocher des cartes?
+                            Il s'agit de définir les actions nécessaires pour faire fonctionner le jeu. Dans le cas du mastermind, on aura besoin de quelques fonctions:
+                        </p>
+                        
+                        <ul>
+                            <li>
+                                Démarrer la partie
+                            </li>
+                            <li>
+                                Générer une séquence aléatoire à décoder
+                            </li>
+                            <li>
+                                Inviter (prompt) le joueur à saisir sa séquence
+                            </li>
+                            <li>
+                                Comparer la séquence du joueur à la séquence correcte
+                            </li>
+                            <li>
+                                Afficher/Révéler la séquence correcte
+                            </li>
+                            <li>
+                                Afficher l'issue de la partie
+                            </li>
+                            <li>
+                                Arrêter la partie
+                            </li>
+                        </ul>
+        
+                        <p>
+                            On peut décomposer une partie de mastermind en plusieurs temps:
+                        </p>
+        
+                        <li>
+                            Initialisation
+    
                         </li>
                         <p>
-                            Il correspond à la manière dont on décide de représenter/matérialiser le principe du jeu:
+                            Phase durant laquelle on remet toutes les variables à leur état initial.
                         </p>
                         <ul>
                             <li>
-                                Structure du plateau
+                                On génère une nouvelle suite de couleurs, aléatoirement. Cette suite est un objet de type liste.
                             </li>
                             <li>
-                                Forme/couleur prise par les éléments de jeu
+                                Puis, on invite le joueur décodeur à tenter une première séquence.
                             </li>
                         </ul>
+                        <br/>
+                        <li>
+                            Exécution
+                        </li>
                         <p>
-                            La représentation du Mastermind:
+                            Durant cette phase, le joueur choisit et exécute sa séquence. L'ordinateur lui retourne les indications sur l'exactitude de sa séquence 
                         </p>
-                        <ul>
-                            <li>
-                                Une surface (tableau/matrice/grille) de 12 lignes et 4 colonnes
-                            </li>
-                            <li>
-                                1 ligne représente 1 essai/tour (séquence de 4 couleurs) par exemple : R, V, B, R
-                            </li>
-                        </ul>
+        
+                        <li>
+                            Issue de partie
+                        </li>
                         <p>
-                            Une représentation (extrêmement) schématique du MasterMind
+                            Dans une partie de mastermind, il n'est pas possible d'arriver à égalité: L'issue de la partie se solde nécessairement par un joueur gagnant et un autre perdant.
                         </p>
-                        <!-- 1	    2	    3       4		Indications			
-                        Tour 1	|   R	|   V	|   B	|   J	|	 1 Correct
-                        ------------------------------------------
-                        Tour 2	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 3	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 4	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 5	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 6	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 7	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 8	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 9	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 10	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 11	|	|	|	|	|
-                        ------------------------------------------
-                        Tour 12	|	|	|	|	|
-
-
-                    Inputs du joueur   _R_	   _V_	   _B_     _J_		(Affichage du tour en cours)
-                    
-                    
-                    [Bouton de validation] -->
-                    <ul>
-                        <li>
-                            Une bordure permettant d'afficher les indices sur le nombre de couleurs bien/mal placées
-                        </li>
-                        <li>
-                            Affichage des indices: sous forme de texte, qui pourra être restylé avec des couleurs (noir/blanc) ultérieurement grâce à du CSS.
-                        </li>
-                    </ul>
-                    <br/>
-                    <li>
-                        La jouabilité/gameplay:
-                    </li>
     
-                    <p>
-                        Correspond aux interactions entre les joueurs et entre les joueurs et les éléments de jeu: Est-ce qu'il faut lancer des dés? Poser des pions? Avancer des pions? Piocher des cartes?
-                        Il s'agit de définir les actions nécessaires pour faire fonctionner le jeu. Dans le cas du mastermind, on aura besoin de quelques fonctions:
-                    </p>
-                    
-                    <ul>
-                        <li>
-                            Démarrer la partie
-                        </li>
-                        <li>
-                            Générer une séquence aléatoire à décoder
-                        </li>
-                        <li>
-                            Inviter (prompt) le joueur à saisir sa séquence
-                        </li>
-                        <li>
-                            Comparer la séquence du joueur à la séquence correcte
-                        </li>
-                        <li>
-                            Afficher/Révéler la séquence correcte
-                        </li>
-                        <li>
-                            Afficher l'issue de la partie
-                        </li>
-                        <li>
-                            Arrêter la partie
-                        </li>
                     </ul>
     
-                    <p>
-                        On peut décomposer une partie de mastermind en plusieurs temps:
                     </p>
-    
-                    <li>
-                        Initialisation
+                </div>
+                
+            </article>
 
-                    </li>
-                    <p>
-                        Phase durant laquelle on remet toutes les variables à leur état initial.
-                    </p>
-                    <ul>
-                        <li>
-                            On génère une nouvelle suite de couleurs, aléatoirement. Cette suite est un objet de type liste.
-                        </li>
-                        <li>
-                            Puis, on invite le joueur décodeur à tenter une première séquence.
-                        </li>
-                    </ul>
-                    <br/>
-                    <li>
-                        Exécution
-                    </li>
-                    <p>
-                        Durant cette phase, le joueur choisit et exécute sa séquence. L'ordinateur lui retourne les indications sur l'exactitude de sa séquence 
-                    </p>
-    
-                    <li>
-                        Issue de partie
-                    </li>
-                    <p>
-                        Dans une partie de mastermind, il n'est pas possible d'arriver à égalité: L'issue de la partie se solde nécessairement par un joueur gagnant et un autre perdant.
-                    </p>
-
-                </ul>
-
-                </p>
-            </div>
         </section>
 
     <!-- Navigation -->
@@ -229,6 +240,7 @@
             <button class="button-gradient-alt">Go to cryptocurrency ranking</button>
         </a>
     </div>
+
     </body>
 
 </html>
