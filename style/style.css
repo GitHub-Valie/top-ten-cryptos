@@ -50,7 +50,7 @@ body {
     background-image: linear-gradient(
         rgba(255, 255, 255, 0), 
         rgba(255, 255, 255, 0)
-    ), linear-gradient(15deg, red, blue);
+    ), linear-gradient(15deg, orangered, orange);
     transition: 0.3s;
     /* Déterminer l'origine du fond du bouton (le dégradé) */
     background-origin: border-box;
@@ -216,11 +216,12 @@ th {
 /* Dessin CSS */
 .cadre {
     position: relative;
-    width: 800px;
-    height: 700px;
+    width: 400px;
+    height: 400px;
     margin: 0 auto;
-    margin-top: 100px;
-    border: solid white 1px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: transparent white 1px;
 }
 
 .carre {
@@ -230,6 +231,86 @@ th {
     background-color: blue;
     top: 50px;
     left: 50px;
+}
+
+.red-trail1 {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 400px solid orangered;
+    border-radius: 50%;
+    top: 10px;
+    left: 200px;
+    transform: rotate(130deg);
+    /* border-style: solid; */
+}
+
+.orange-trail1 {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 340px solid orange;
+    border-radius: 50%;
+    top: 52px;
+    left: 220px;
+    transform: rotate(130deg);
+    /* border-style: solid; */
+}
+
+.red-trail2 {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 185px solid orangered;
+    border-radius: 50%;
+    top: 10px;
+    left: 200px;
+    transform: rotate(125deg);
+}
+
+.orange-trail2 {
+    position: absolute;
+    width: 0.2px;
+    height: 0px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 150px solid orange;
+    border-radius: 50%;
+    top: 36px;
+    left: 215px;
+    transform: rotate(125deg);
+}
+
+.red-trail3 {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 250px solid orangered;
+    border-radius: 50%;
+    top: 95px;
+    left: 100px;
+    transform: rotate(135deg);
+}
+
+.orange-trail3 {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 215px solid orange;
+    border-radius: 50%;
+    top: 120px;
+    left: 110px;
+    transform: rotate(135deg);
 }
 
 .rectangle {
